@@ -1,0 +1,126 @@
+{
+  "status": "LOCKED_REPRODUCIBLE_BENCHMARK",
+  "sample": {
+    "galaxies": 171,
+    "points": 3344,
+    "excluded_points": [
+      {
+        "Galaxy": "UGC01281",
+        "R": 0.08,
+        "Vbar2": -31.972499999999997
+      },
+      {
+        "Galaxy": "UGC01281",
+        "R": 0.23,
+        "Vbar2": -21.619999999999997
+      }
+    ]
+  },
+  "nfw_definition": {
+    "parameters": [
+      "log10(rho_s / Msun kpc^-3)",
+      "log10(r_s / kpc)"
+    ],
+    "bounds": {
+      "log10_rho_s": [
+        4.0,
+        12.0
+      ],
+      "log10_r_s": [
+        -2.0,
+        3.0
+      ]
+    },
+    "objective": "unweighted velocity residual sum of squares per galaxy",
+    "optimizer": "scipy.optimize.least_squares",
+    "method": "trf",
+    "starts": [
+      [
+        5.5,
+        -1.0
+      ],
+      [
+        5.5,
+        0.0
+      ],
+      [
+        5.5,
+        1.0
+      ],
+      [
+        5.5,
+        2.0
+      ],
+      [
+        7.5,
+        -1.0
+      ],
+      [
+        7.5,
+        0.0
+      ],
+      [
+        7.5,
+        1.0
+      ],
+      [
+        7.5,
+        2.0
+      ],
+      [
+        9.5,
+        -1.0
+      ],
+      [
+        9.5,
+        0.0
+      ],
+      [
+        9.5,
+        1.0
+      ],
+      [
+        9.5,
+        2.0
+      ],
+      [
+        11.0,
+        -1.0
+      ],
+      [
+        11.0,
+        0.0
+      ],
+      [
+        11.0,
+        1.0
+      ],
+      [
+        11.0,
+        2.0
+      ]
+    ],
+    "xtol": 1e-10,
+    "ftol": 1e-10,
+    "gtol": 1e-10,
+    "max_nfev": 2000
+  },
+  "nfw_result": {
+    "rms_km_s": 25.953824448689623,
+    "r2": 0.9122080045812845,
+    "rss": 2252521.755748807,
+    "k": 342,
+    "aic": 22462.261313840274,
+    "bic": 24553.564971018244
+  },
+  "boundary_result": {
+    "rms_km_s": 33.68304987427586,
+    "k": 3,
+    "aic": 23527.660819355642,
+    "bic": 23546.005588278254
+  },
+  "comparison": {
+    "delta_aic_nfw_minus_boundary": -1065.3995055153682,
+    "delta_bic_nfw_minus_boundary": 1007.5593827399898
+  }
+}

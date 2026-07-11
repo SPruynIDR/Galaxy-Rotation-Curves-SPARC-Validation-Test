@@ -1,0 +1,24 @@
+START HERE — FULL NFW / AIC / BIC BENCHMARK
+
+Upload every file in this folder to the same GitHub repository folder.
+
+To run locally:
+python -m pip install -r requirements.txt
+python run_full_head_to_head_benchmark.py
+
+The script uses the included raw SPARC catalog and mass-model tables.
+It fits two NFW parameters independently for each of 171 galaxies,
+writes all best-fit parameters and point predictions, and calculates
+NFW and boundary-relation AIC and BIC values.
+
+Locked benchmark result:
+NFW RMS = 25.953824448689616 km/s
+NFW R^2 = 0.9122080045812845
+NFW AIC = 22462.26131384027
+NFW BIC = 24553.56497101824
+
+Boundary AIC = 23527.660760598756
+Boundary BIC = 23546.005597117028
+
+AIC favors NFW.
+BIC favors the three-parameter global boundary relation.
